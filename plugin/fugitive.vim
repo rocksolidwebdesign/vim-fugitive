@@ -1728,6 +1728,15 @@ function! s:BlameSyntax() abort
 endfunction
 
 " }}}1
+
+" Gstashes {{{1
+call s:command("-bar Gstashes :execute s:stashes()")
+
+function! s:Stash() abort
+  echo 'stash me again!'
+endfunction
+" }}}
+
 " Gbrowse {{{1
 
 call s:command("-bar -bang -count=0 -nargs=? -complete=customlist,s:EditComplete Gbrowse :execute s:Browse(<bang>0,<line1>,<count>,<f-args>)")
